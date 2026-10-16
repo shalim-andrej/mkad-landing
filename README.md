@@ -21,7 +21,7 @@
 - Оптимизированные шрифты Manrope + Cormorant Garamond
 
 ## Скриншот
-<!-- сюда можно вставить скриншот позже -->
+![Главная страница лендинга](https://i.yapx.ru/eTKaI.png)
 
 ## Автор
 **shalim-andrej** — [GitHub](https://github.com/shalim-andrej)
