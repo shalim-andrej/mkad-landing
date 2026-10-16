@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Куда свалить из Москвы на выходные — Москва за МКАД</title>
+<meta name="description" content="Сергиев Посад, Коломна, Звенигород, Сенеж. Готовые маршруты без машины. Цены, расписание, лайфхаки. Новый маршрут каждую среду.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --ink:#0B1A2B;
+    --ink-2:#1A3A5C;
+    --paper:#F5F3EE;
+    --paper-2:#EDEAE1;
+    --muted:#7A7871;
+    --line:rgba(11,26,43,.12);
+    --line-light:rgba(255,255,255,.12);
+    --gold:#C9A46A;
+    --gold-soft:#E4CFA6;
+    --sans:'Manrope',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+    --serif:'Cormorant Garamond',Georgia,serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:var(--sans);background:var(--paper);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  img{display:block;max-width:100%}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1280px;margin:0 auto;padding:0 32px}
+  .eyebrow{display:inline-flex;align-items:center;gap:14px;font-size:11px;font-weight:700;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);margin-bottom:28px}
+  .eyebrow::before{content:"";width:40px;height:1px;background:var(--gold)}
+  .h2{font-family:var(--serif);font-weight:600;font-size:clamp(40px,5.2vw,72px);line-height:1.02;letter-spacing:-.01em}
+  .h2 em{font-style:italic;color:var(--gold)}
+  .lead{font-size:17px;line-height:1.7;color:var(--muted);max-width:520px}
+  .section{padding:140px 0}
+
+  /* HERO */
+  .hero{position:relative;min-height:100vh;display:flex;align-items:flex-end;background:var(--ink);color:#fff;overflow:hidden}
+  .hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.55}
+  .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,26,43,.6) 0%,rgba(11,26,43,.3) 40%,rgba(11,26,43,.95) 100%);pointer-events:none;z-index:1}
+  .hero-content{position:relative;z-index:2;padding-bottom:110px;padding-top:180px;width:100%}
+  .hero-tag{display:inline-block;padding:9px 18px;border:1px solid rgba(228,207,166,.5);color:var(--gold-soft);font-size:11px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;margin-bottom:40px;background:rgba(11,26,43,.3)}
+  .hero h1{font-family:var(--serif);font-weight:500;font-size:clamp(48px,7.5vw,116px);line-height:.98;letter-spacing:-.02em;max-width:1100px}
+  .hero h1 em{font-style:italic;color:var(--gold-soft)}
+  .hero-foot{display:flex;justify-content:space-between;align-items:flex-end;gap:48px;margin-top:56px;flex-wrap:wrap}
+  .hero p{font-size:18px;line-height:1.7;color:rgba(255,255,255,.75);max-width:560px}
+  .hero-actions{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+
+  .btn{display:inline-flex;align-items:center;gap:14px;padding:19px 34px;font-size:14px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;border-radius:4px;border:1px solid transparent;cursor:pointer;transition:all .35s ease;font-family:inherit}
+  .btn-gold{background:var(--gold);color:var(--ink)}
+  .btn-gold:hover{background:var(--gold-soft);transform:translateY(-2px);box-shadow:0 18px 40px -16px rgba(201,164,106,.6)}
+  .btn-arrow{transition:transform .35s}
+  .btn:hover .btn-arrow{transform:translateX(4px)}
+
+  /* STATS */
+  .stats{background:var(--paper);border-bottom:1px solid var(--line)}
+  .stats-grid{display:grid;grid-template-columns:repeat(4,1fr)}
+  .stat{padding:64px 32px;border-right:1px solid var(--line)}
+  .stat:first-child{padding-left:0}
+  .stat:last-child{border-right:none;padding-right:0}
+  .stat-num{font-family:var(--serif);font-size:clamp(52px,6vw,84px);font-weight:500;line-height:1;letter-spacing:-.02em}
+  .stat-num sup{font-size:.4em;color:var(--gold);vertical-align:top;margin-left:6px}
+  .stat-label{margin-top:16px;font-size:12px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+
+  /* APPROACH */
+  .approach-head{display:grid;grid-template-columns:1.2fr 1fr;gap:64px;align-items:end;margin-bottom:100px}
+  .features{display:grid;grid-template-columns:repeat(2,1fr);border-top:1px solid var(--line);border-left:1px solid var(--line)}
+  .feature{padding:56px 44px 60px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);transition:background .5s}
+  .feature:hover{background:#fff}
+  .feature-num{font-family:var(--serif);font-style:italic;font-size:22px;color:var(--gold);margin-bottom:40px;display:block}
+  .feature h3{font-family:var(--serif);font-size:32px;font-weight:600;line-height:1.1;margin-bottom:18px}
+  .feature p{font-size:15px;line-height:1.7;color:var(--muted)}
+
+  /* ROUTES (dark) */
+  .dark{background:var(--ink);color:#fff;position:relative;overflow:hidden}
+  .dark .lead{color:rgba(255,255,255,.55)}
+  .routes-head{display:flex;justify-content:space-between;align-items:flex-end;gap:48px;margin-bottom:90px;flex-wrap:wrap}
+
+  .routes-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:32px}
+  .route-card{background:rgba(255,255,255,.03);border:1px solid var(--line-light);border-radius:8px;overflow:hidden;display:flex;flex-direction:column;transition:transform .5s,background .5s;box-sizing:border-box}
+  .route-card:hover{transform:translateY(-6px);background:rgba(255,255,255,.06)}
+  .route-media{position:relative;height:280px;overflow:hidden}
+  .route-media img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s cubic-bezier(.2,.7,.2,1)}
+  .route-card:hover .route-media img{transform:scale(1.05)}
+  .route-num-badge{position:absolute;top:20px;left:20px;background:rgba(11,26,43,.85);color:var(--gold);font-family:var(--serif);font-style:italic;font-size:20px;padding:6px 14px;border-radius:4px;z-index:2}
+  .route-content{padding:36px 36px 40px;display:flex;flex-direction:column;flex:1 1 auto}
+  .route-content h3{font-family:var(--serif);font-size:32px;font-weight:600;line-height:1.1;margin-bottom:20px;color:#fff}
+  .route-price{display:inline-block;color:var(--gold);font-size:13px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;margin-bottom:20px}
+  .route-hook{font-family:var(--serif);font-size:20px;font-style:italic;line-height:1.5;color:rgba(255,255,255,.85);margin-bottom:18px}
+  .route-desc{font-size:15px;line-height:1.7;color:rgba(255,255,255,.55);margin-bottom:24px}
+  .route-how{font-size:13px;color:rgba(255,255,255,.4);letter-spacing:.04em;margin-top:auto;padding-top:20px;border-top:1px solid var(--line-light)}
+
+  /* CTA */
+  .cta{position:relative;color:#fff;background:var(--ink-2);overflow:hidden}
+  .cta::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at top right,rgba(201,164,106,.15),transparent 60%);pointer-events:none}
+  .cta .wrap{position:relative;z-index:2}
+  .cta-inner{text-align:center;max-width:900px;margin:0 auto}
+  .cta h2{font-family:var(--serif);font-weight:600;font-size:clamp(38px,5vw,68px);line-height:1.05;letter-spacing:-.01em;color:#fff;margin-bottom:24px}
+  .cta h2 em{font-style:italic;color:var(--gold-soft)}
+  .cta p{font-size:18px;line-height:1.7;color:rgba(255,255,255,.65);max-width:620px;margin:0 auto 40px}
+  .cta-actions{display:flex;justify-content:center;gap:16px;flex-wrap:wrap}
+  .cta-meta{margin-top:36px;font-size:13px;letter-spacing:.04em;color:rgba(255,255,255,.4)}
+
+  .footer{padding:40px 0;text-align:center;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);border-top:1px solid var(--line);background:var(--paper)}
+
+  /* reveal */
+  .reveal{opacity:0;transform:translateY(40px);transition:opacity 1s cubic-bezier(.2,.7,.2,1),transform 1s cubic-bezier(.2,.7,.2,1)}
+  .reveal.in{opacity:1;transform:none}
+  .d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}
+
+  @media (max-width:1024px){
+    .section{padding:110px 0}
+    .approach-head{grid-template-columns:1fr;gap:32px}
+    .features{grid-template-columns:1fr}
+    .routes-grid{grid-template-columns:1fr}
+    .stats-grid{grid-template-columns:repeat(2,1fr)}
+    .stat{border-bottom:1px solid var(--line)}
+    .stat:nth-child(2n){border-right:none;padding-right:0}
+    .stat:nth-child(2n+1){padding-left:0}
+  }
+  @media (max-width:640px){
+    .wrap{padding:0 20px}
+    .section{padding:80px 0}
+    .hero-content{padding-top:140px;padding-bottom:70px}
+    .hero-foot{margin-top:32px;gap:32px}
+    .stat{padding:44px 0!important;border-right:none}
+    .feature{padding:40px 28px}
+    .route-content{padding:28px 24px 32px}
+    .route-content h3{font-size:26px}
+    .route-media{height:220px}
+    .btn{padding:17px 26px}
+    .cta-actions{flex-direction:column;align-items:center}
+  }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <img class="hero-bg" src="https://mkad.ucoz.net/931914_original.jpg" alt="">
+  <div class="wrap hero-content">
+    <span class="hero-tag">Москва за МКАД · Маршруты выходного дня</span>
+    <h1>Куда свалить из Москвы<br>уже <em>в эти выходные</em>.</h1>
+    <div class="hero-foot">
+      <p>Сергиев Посад, Коломна, Звенигород, Сенеж — и ещё десятки мест. Готовые маршруты без машины: цены, расписание, лайфхаки. Всё проверено лично.</p>
+      <div class="hero-actions">
+        <a href="https://max.ru/id591002056026_biz2" class="btn btn-gold" target="_blank" rel="noopener">Смотреть маршруты <span class="btn-arrow">→</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats">
+  <div class="wrap stats-grid">
+    <div class="stat reveal">
+      <div class="stat-num">30<sup>+</sup></div>
+      <div class="stat-label">маршрутов в канале</div>
+    </div>
+    <div class="stat reveal d1">
+      <div class="stat-num">500<sup>₽</sup></div>
+      <div class="stat-label">средняя поездка на день</div>
+    </div>
+    <div class="stat reveal d2">
+      <div class="stat-num">2<sup>ч</sup></div>
+      <div class="stat-label">максимум в пути</div>
+    </div>
+    <div class="stat reveal d3">
+      <div class="stat-num">0</div>
+      <div class="stat-label">нужно машин</div>
+    </div>
+  </div>
+</section>
+
+<!-- APPROACH -->
+<section class="section">
+  <div class="wrap">
+    <div class="approach-head">
+      <div class="reveal">
+        <span class="eyebrow">Подход</span>
+        <h2 class="h2">Не путеводитель. <em>Личный опыт.</em></h2>
+      </div>
+      <p class="lead reveal d1">Каждый маршрут я проехал сам. С фотографиями, ценами, расписанием и лайфхаками, о которых не пишут в интернете.</p>
+    </div>
+    <div class="features">
+      <div class="feature reveal">
+        <span class="feature-num">i.</span>
+        <h3>Готовый план на выходные</h3>
+        <p>Не нужно гуглить часами. Открыл пост — увидел, куда ехать, как добраться и что смотреть.</p>
+      </div>
+      <div class="feature reveal d1">
+        <span class="feature-num">ii.</span>
+        <h3>Честные цены</h3>
+        <p>Точный бюджет каждой поездки: билеты, еда, входные билеты. Никаких «примерно» и «от».</p>
+      </div>
+      <div class="feature reveal">
+        <span class="feature-num">iii.</span>
+        <h3>Без машины</h3>
+        <p>Все маршруты доступны на электричках и автобусах. Идеально для тех, у кого нет авто.</p>
+      </div>
+      <div class="feature reveal d1">
+        <span class="feature-num">iv.</span>
+        <h3>Проверено лично</h3>
+        <p>Я не публикую маршрут, пока не проеду его сам. Все лайфхаки — из личного опыта.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ROUTES (dark) -->
+<section class="section dark" id="routes">
+  <div class="wrap">
+    <div class="routes-head">
+      <div class="reveal">
+        <span class="eyebrow">Маршруты</span>
+        <h2 class="h2" style="color:#fff">Четыре направления <em>на эту субботу</em>.</h2>
+      </div>
+      <p class="lead reveal d1">Проверенные лично. Каждый — один день, от дома до дома.</p>
+    </div>
+
+    <div class="routes-grid">
+
+      <article class="route-card reveal">
+        <div class="route-media">
+          <span class="route-num-badge">01</span>
+          <img src="https://mkad.ucoz.net/931914_original.jpg" alt="Сергиев Посад">
+        </div>
+        <div class="route-content">
+          <h3>Сергиев Посад</h3>
+          <span class="route-price">от 500 ₽ · 1 день</span>
+          <p class="route-hook">Русский Ватикан за час от Москвы. Свежая монастырская выпечка и смотровая, о которой не знают туристы.</p>
+          <p class="route-desc">Троице-Сергиева лавра, Блинная гора, атмосфера старого купеческого города.</p>
+          <p class="route-how">🚆 Электричка с Ярославского вокзала, ~1 ч 20 мин</p>
+        </div>
+      </article>
+
+      <article class="route-card reveal d1">
+        <div class="route-media">
+          <span class="route-num-badge">02</span>
+          <img src="https://mkad.ucoz.net/4-3.jpg" alt="Коломна">
+        </div>
+        <div class="route-content">
+          <h3>Коломна</h3>
+          <span class="route-price">от 900 ₽ · 1 день</span>
+          <p class="route-hook">Самая вкусная поездка сезона: кремль, пастила ручной работы и старинные торговые ряды.</p>
+          <p class="route-desc">Маршрут на целый день с гастрономической программой — от калача до яблочной пастилы.</p>
+          <p class="route-how">🚆 Электричка с Казанского вокзала, ~1 ч 50 мин</p>
+        </div>
+      </article>
+
+      <article class="route-card reveal">
+        <div class="route-media">
+          <span class="route-num-badge">03</span>
+          <img src="https://mkad.ucoz.net/aec5f417d6b7ea34b32ffc19568e1903.jpg" alt="Звенигород">
+        </div>
+        <div class="route-content">
+          <h3>Звенигород</h3>
+          <span class="route-price">от 590 ₽ · 1 день</span>
+          <p class="route-hook">Подмосковная Швейцария за час езды. Монастырь на холме, река и тишина, которой нет в городе.</p>
+          <p class="route-desc">Саввино-Сторожевский монастырь, источник, вид на Москва-реку с древнего вала.</p>
+          <p class="route-how">🚆 Электричка с Белорусского вокзала, ~1 час</p>
+        </div>
+      </article>
+
+      <article class="route-card reveal d1">
+        <div class="route-media">
+          <span class="route-num-badge">04</span>
+          <img src="https://mkad.ucoz.net/caption.jpg" alt="Озеро Сенеж">
+        </div>
+        <div class="route-content">
+          <h3>Озеро Сенеж</h3>
+          <span class="route-price">от 590 ₽ · 1 день</span>
+          <p class="route-hook">Пикник у воды и лучший закат в Подмосковье. Уехать можно утром, вернуться к вечеру.</p>
+          <p class="route-desc">Городской пляж, сапборды, дикий песчаный берег, о котором знают только местные.</p>
+          <p class="route-how">🚆 «Ласточка» с Ленинградского вокзала, ~1 час</p>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section cta">
+  <div class="wrap">
+    <div class="cta-inner">
+      <div class="reveal">
+        <span class="eyebrow">Подписка</span>
+        <h2>В канале — ещё <em>26 маршрутов</em><br>и новый каждую среду.</h2>
+        <p>Подпишитесь и выберите, куда поехать в ближайшие выходные. Бесплатно, без спама, отписаться можно в один клик.</p>
+        <div class="cta-actions">
+          <a href="https://max.ru/id591002056026_biz2" class="btn btn-gold" target="_blank" rel="noopener">Перейти в канал <span class="btn-arrow">→</span></a>
+        </div>
+        <p class="cta-meta">🔥 Новый маршрут каждую среду в 10:00</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap">© 2026 Москва за МКАД · Все маршруты проверены лично</div>
+</footer>
+
+<script>
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }});
+  }, {threshold: .12, rootMargin: '0px 0px -40px 0px'});
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>
